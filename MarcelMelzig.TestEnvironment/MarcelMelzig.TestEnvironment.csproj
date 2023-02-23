@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net7.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<Authors>Marcel Melzig</Authors>
+	<Description>Implements a test environment.</Description>
+	<Copyright>© Marcel Melzig</Copyright>
+	<PackageTags>test environment xunit</PackageTags>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Title>Test Environment</Title>
+	<PackageIcon>Seat-Belt-256.png</PackageIcon>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryType>Git</RepositoryType>
+	<PackageReleaseNotes>Initial version.</PackageReleaseNotes>
+	<PackageVersion>1.0.4</PackageVersion>
+	<FileVersion>1.0.4.0</FileVersion>
+	<InformationalVersion>1.0.4</InformationalVersion>
+	<AssemblyVersion>1.0.4.0</AssemblyVersion>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<NoWarn>1701;1702;1591</NoWarn>
+	<Optimize>False</Optimize>
+	<Deterministic>False</Deterministic>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	<NoWarn>1701;1702;1591</NoWarn>
+	<Optimize>True</Optimize>
+	<Deterministic>True</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Include="..\README.md">
+	  <Pack>True</Pack>
+	  <PackagePath>\</PackagePath>
+	</None>
+	<None Include="..\Seat-Belt-256.png">
+	  <Pack>True</Pack>
+	  <PackagePath>\</PackagePath>
+	</None>
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="FluentValidation" />
+	<PackageReference Include="Microsoft.AspNetCore.Http" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+	  <TreatAsUsed>true</TreatAsUsed>
+	</PackageReference>
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages" />
+	<PackageReference Include="Microsoft.Data.Sqlite.Core" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+	<PackageReference Include="Microsoft.Extensions.Configuration" />
+	<PackageReference Include="Moq" />
+	<PackageReference Include="Shouldly">
+	  <TreatAsUsed>true</TreatAsUsed>
+	</PackageReference>
+	<PackageReference Include="xunit.extensibility.core" />
+  </ItemGroup>
+
+</Project>
