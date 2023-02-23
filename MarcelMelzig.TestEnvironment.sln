@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A36C0E54-01B3-481E-B04D-5C3A93B2E25E}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
+		.github\workflows\production.yml = .github\workflows\production.yml
 		README.md = README.md
 		Seat-Belt-256.png = Seat-Belt-256.png
 	EndProjectSection
