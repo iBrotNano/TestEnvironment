@@ -8,6 +8,7 @@ env:
   VERSION_SUFFIX: ${{ github.ref_name }}
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
   pull_request:
