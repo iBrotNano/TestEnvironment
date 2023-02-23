@@ -1,5 +1,12 @@
 name: main
 
+env:
+  VERSION_MAJOR: 1
+  VERSION_MINOR: 0
+  VERSION_PATCH: 5
+  VERSION_BUILD: ${{ github.run_number }}
+  VERSION_DEV_PREFIX: ${{ github.ref_name }}
+
 on:
   push:
     branches: [ "main" ]
@@ -19,7 +26,9 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: Versioning
+      run: echo "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH.$VERSION_BUILD"
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore -c Release
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test -c Release --no-build --verbosity normal
