@@ -27,7 +27,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Versioning
-      run: echo 'The current version of the build is: ${{VERSION_MAJOR}}.${{VERSION_MINOR}}.${{VERSION_PATCH}}.${{VERSION_SUFFIX}}-${{VERSION_BUILD}}'
+      run: echo 'The current version of the build is ${{VERSION_MAJOR}}.${{VERSION_MINOR}}.${{VERSION_PATCH}}.${{VERSION_SUFFIX}}-${{VERSION_BUILD}}'
     - name: Build
       run: dotnet build --no-restore -c Release
     - name: Test
