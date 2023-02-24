@@ -6,6 +6,9 @@ env:
   VERSION_PATCH: 5
   VERSION_BUILD: ${{ github.run_number }}
   VERSION_SUFFIX: ${{ github.ref_name }}
+  PACKAGE_VERSION: ""
+  FILE_VERSION: ""
+  ASSEMBLY_VERSION: ""
 
 on:
   workflow_dispatch:
@@ -31,11 +34,9 @@ jobs:
       id: date
       run: echo "::set-output name=today::$(date +'%Y.%-m%-d.%-H%-M.%-S')"
     - name: Generate version numbers
-      run: echo $PACKAGE_VERSION - $FILE_VERSION - $ASSEMBLY_VERSION
-      env:
-        PACKAGE_VERSION: ${{ VERSION_MAJOR }}.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD
-        FILE_VERSION: ${{ steps.date.outputs.today }}
-        ASSEMBLY_VERSION: $VERSION_MAJOR.0.0.0
+      run: echo $VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD >> $PACKAGE_VERSION \
+        && echo $VERSION_MAJOR.0.0.0 >> $ASSEMBLY_VERSION \
+        && ${{ steps.date.outputs.today }} >> $FILE_VERSION
     - name: Versioning
       run: |
         echo "Package version is $PACKAGE_VERSION." \
