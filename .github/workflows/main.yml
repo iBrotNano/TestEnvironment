@@ -33,9 +33,9 @@ jobs:
     - name: Generate version numbers
       run: echo $PACKAGE_VERSION - $FILE_VERSION - $ASSEMBLY_VERSION
       env:
-        PACKAGE_VERSION: ${{ $VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD }}
+        PACKAGE_VERSION: "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD"
         FILE_VERSION: ${{ steps.date.outputs.today }}
-        ASSEMBLY_VERSION: ${{ $VERSION_MAJOR.0.0.0 }}
+        ASSEMBLY_VERSION: "$VERSION_MAJOR.0.0.0"
     - name: Versioning
       run: |
         echo "Package version is $PACKAGE_VERSION." \
