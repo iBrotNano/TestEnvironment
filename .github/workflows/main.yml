@@ -33,8 +33,8 @@ jobs:
     - name: Versioning
       run: |
         echo "Package version is $PACKAGE_VERSION." \
-        echo "File version is $FILE_VERSION." \
-        echo "Assembly version is $ASSEMBLY_VERSION." \
+        && echo "File version is $FILE_VERSION." \
+        && echo "Assembly version is $ASSEMBLY_VERSION." \
         && sed -i -e "s/4.7.1.1/$VERSION/g" AppExample/AppExample.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" TestProjectExample/TestProjectExample.csproj \
