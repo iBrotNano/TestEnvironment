@@ -6,7 +6,6 @@ env:
   VERSION_PATCH: 5
   VERSION_BUILD: ${{ github.run_number }}
   VERSION_SUFFIX: ${{ github.ref_name }}
-  FILE_VERSION: ""
 
 on:
   workflow_dispatch:
