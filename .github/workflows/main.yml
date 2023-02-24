@@ -39,18 +39,18 @@ jobs:
         echo "Package version is $PACKAGE_VERSION" \
         && echo "File version is $FILE_VERSION" \
         && echo "Assembly version is $ASSEMBLY_VERSION" \
-        && sed -i -e "s/<PackageVersion>4.7.11</PackageVersion>/$PACKAGE_VERSION/g" AppExample/AppExample.csproj \
-        && sed -i -e "s/<FileVersion>4.7.1.1</FileVersion>/$FILE_VERSION/g" AppExample/AppExample.csproj \
-        && sed -i -e "s/<InformationalVersion>4.7.11</InformationalVersion>/$PACKAGE_VERSION/g" AppExample/AppExample.csproj \
-        && sed -i -e "s/<AssemblyVersion>4.7.1.1</AssemblyVersion>/$ASSEMBLY_VERSION/g" AppExample/AppExample.csproj \
-        && sed -i -e "s/<PackageVersion>4.7.11</PackageVersion>/$PACKAGE_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
-        && sed -i -e "s/<FileVersion>4.7.1.1</FileVersion>/$FILE_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
-        && sed -i -e "s/<InformationalVersion>4.7.11</InformationalVersion>/$PACKAGE_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
-        && sed -i -e "s/<AssemblyVersion>4.7.1.1</AssemblyVersion>/$ASSEMBLY_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
-        && sed -i -e "s/<PackageVersion>4.7.11</PackageVersion>/$PACKAGE_VERSION/g" TestProjectExample/TestProjectExample.csproj \
-        && sed -i -e "s/<FileVersion>4.7.1.1</FileVersion>/$FILE_VERSION/g" TestProjectExample/TestProjectExample.csproj \
-        && sed -i -e "s/<InformationalVersion>4.7.11</InformationalVersion>/$PACKAGE_VERSION/g" TestProjectExample/TestProjectExample.csproj \
-        && sed -i -e "s/<AssemblyVersion>4.7.1.1</AssemblyVersion>/$ASSEMBLY_VERSION/g" TestProjectExample/TestProjectExample.csproj \
+        && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/$PACKAGE_VERSION/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/$FILE_VERSION/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/$PACKAGE_VERSION/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/$ASSEMBLY_VERSION/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/$PACKAGE_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/$FILE_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/$PACKAGE_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/$ASSEMBLY_VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/$PACKAGE_VERSION/g" TestProjectExample/TestProjectExample.csproj \
+        && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/$FILE_VERSION/g" TestProjectExample/TestProjectExample.csproj \
+        && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/$PACKAGE_VERSION/g" TestProjectExample/TestProjectExample.csproj \
+        && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/$ASSEMBLY_VERSION/g" TestProjectExample/TestProjectExample.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" README.md
     - name: Build
       run: dotnet build --no-restore -c Release
