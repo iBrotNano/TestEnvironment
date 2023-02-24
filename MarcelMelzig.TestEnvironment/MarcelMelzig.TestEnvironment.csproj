@@ -14,10 +14,6 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>Git</RepositoryType>
 		<PackageReleaseNotes>Initial version.</PackageReleaseNotes>
-		<PackageVersion>4.7.11</PackageVersion>
-		<FileVersion>4.7.1.1</FileVersion>
-		<InformationalVersion>4.7.11</InformationalVersion>
-		<AssemblyVersion>4.7.1.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 	</PropertyGroup>
