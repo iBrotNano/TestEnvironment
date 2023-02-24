@@ -42,7 +42,9 @@ jobs:
         && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/<PackageVersion>$PACKAGE_VERSION<\/PackageVersion>/g" AppExample/AppExample.csproj \
         && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/<FileVersion>$FILE_VERSION<\/FileVersion>/g" AppExample/AppExample.csproj \
         && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" AppExample/AppExample.csproj \
-        && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/<PackageVersion>$PACKAGE_VERSION<\/PackageVersion>/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/<FileVersion>$FILE_VERSION<\/FileVersion>/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" README.md
     - name: Build
       run: dotnet build --no-restore -c Release
