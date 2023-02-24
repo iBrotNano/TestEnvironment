@@ -6,9 +6,9 @@ env:
   VERSION_PATCH: 5
   VERSION_BUILD: ${{ github.run_number }}
   VERSION_SUFFIX: ${{ github.ref_name }}
-  PACKAGE_VERSION: "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD"
-  FILE_VERSION: $(date +'%y.%Mdd.%Hmm.%sSSS')
-  ASSEMBLY_VERSION: "$MAJOR.0.0.0"
+  PACKAGE_VERSION: ""
+  FILE_VERSION: ""
+  ASSEMBLY_VERSION: ""
 
 on:
   workflow_dispatch:
@@ -30,6 +30,15 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: Get date string for version number
+      id: date
+      run: echo "::set-output name=date::$(date +'%y.%Mdd.%Hmm.%sSSS')"
+    - name: Generate version numbers
+      run: echo $PACKAGE_VERSION - $FILE_VERSION - $ASSEMBLY_VERSION
+      env:
+        PACKAGE_VERSION: "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD"
+        FILE_VERSION: ${{ steps.date.outputs.date }}
+        ASSEMBLY_VERSION: "$VERSION_MAJOR.0.0.0"
     - name: Versioning
       run: |
         echo "Package version is $PACKAGE_VERSION." \
