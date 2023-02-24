@@ -34,9 +34,10 @@ jobs:
       id: date
       run: echo "::set-output name=today::$(date +'%Y.%-m%-d.%-H%-M.%-S')"
     - name: Generate version numbers
-      run: echo $VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD >> $PACKAGE_VERSION \
-        && echo $VERSION_MAJOR.0.0.0 >> $ASSEMBLY_VERSION \
-        && ${{ steps.date.outputs.today }} >> $FILE_VERSION
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$VERSION_SUFFIX-$VERSION_BUILD" >> $GITHUB_ENV \
+        && echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
+      env:
+        FILE_VERSION: ${{ steps.date.outputs.today }}
     - name: Versioning
       run: |
         echo "Package version is $PACKAGE_VERSION." \
