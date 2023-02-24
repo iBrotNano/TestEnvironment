@@ -33,6 +33,9 @@ jobs:
         && sed -i -e "s/4.7.1.1/$VERSION/g" AppExample/AppExample.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" TestProjectExample/TestProjectExample.csproj \
+        && sed -i -e "s/4.7.11/$VERSION/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/4.7.11/$VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/4.7.11/$VERSION/g" TestProjectExample/TestProjectExample.csproj \
         && sed -i -e "s/4.7.1.1/$VERSION/g" README.md
     - name: Build
       run: dotnet build --no-restore -c Release
