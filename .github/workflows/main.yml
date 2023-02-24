@@ -46,5 +46,10 @@ jobs:
         && sed -i -e "s/4.7.1.1/$VERSION/g" README.md
     - name: Build
       run: dotnet build --no-restore -c Release
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: projectfiles
+        path: Directory.Build.props
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
