@@ -30,7 +30,10 @@ jobs:
     - name: Versioning
       run: |
         echo "The current version of the build is $VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH.$VERSION_SUFFIX-$VERSION_BUILD" \
-        && sed -i -e "s/4.7.1.1/$VERSION/g" README.md
+        && sed -i -e "s/4.7.1.1/$VERSION/g" AppExample/AppExample.csproj \
+        && sed -i -e "s/4.7.1.1/$VERSION/g" MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj \
+        && sed -i -e "s/4.7.1.1/$VERSION/g" TestProjectExample/TestProjectExample.csproj \
+        && sed -i -e "s/4.7.1.1/$VERSION/g" README.md \
     - name: Build
       run: dotnet build --no-restore -c Release
     - name: Test
