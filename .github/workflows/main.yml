@@ -42,12 +42,15 @@ jobs:
         && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/<FileVersion>$FILE_VERSION<\/FileVersion>/g" Directory.Build.props \
         && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" Directory.Build.props \
         && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props \
-        && sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" README.md \
-        && echo "TAG=$PACKAGE_VERSION" >> $GITHUB_ENV
-    - name: Tag verion in Git
-      uses: hole19/git-tag-action@v1.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        && sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" README.md
+    - name: pkgdeps/git-tag-action
+      uses: pkgdeps/git-tag-action@v2.0.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_repo: ${{ github.repository }}
+        git_commit_sha: ${{ github.sha }}
+        version: ${{ github.env.package_version }}
+        git_tag_prefix: "v"
     - name: Build
       run: dotnet build --no-restore -c Release
     - name: Upload Build Artifacts
