@@ -32,7 +32,7 @@ jobs:
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
     - name: Generate file version
-      run: echo "FILE_VERSION=date +'%Y.%-m%-d.%-H%-M.%-S'" >> $GITHUB_ENV
+      run: echo "FILE_VERSION=$(date +'%Y.%-m%-d.%-H%-M.%-S')" >> $GITHUB_ENV
     - name: Versioning
       run: |
         echo "Package version is $PACKAGE_VERSION" \
