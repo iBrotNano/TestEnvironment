@@ -43,12 +43,12 @@ jobs:
         && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" Directory.Build.props \
         && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props \
         && sed -i -e "s/4.7.1.1/$VERSION/g" README.md
+    - name: Build
+      run: dotnet build --no-restore -c Release
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3.1.2
       with:
         name: projectfiles
-        path: Directory.Build.props
-    - name: Build
-      run: dotnet build --no-restore -c Release
+        path: /TestEnvironment/
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
