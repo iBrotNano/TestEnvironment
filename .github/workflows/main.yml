@@ -49,6 +49,6 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         name: projectfiles
-        path: /*
+        path: /home/runner/work/TestEnvironment/TestEnvironment/*
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
