@@ -1,5 +1,5 @@
 ---
-name: task
+name: Task
 about: Task that has to be done
 title: 'Summary'
 labels: 'task'
@@ -39,7 +39,7 @@ How can the task be done?
 
 ## Dissection
 
-| Integrationtest | ID                                          |
+| Integration test | ID                                          |
 | --------------- | ------------------------------------------- |
 | Action          | What has to be done to validate the system? |
 | Expected result | What is a valid result?                     |

@@ -27,7 +27,7 @@ A description of the faulty behavior.
 
 ### Input
 
-What data goes into the system and what is there source?
+What data goes into the system and what is their source?
 
 ### Output
 
@@ -52,7 +52,7 @@ Architecture of the system and/or layout of the GUI. Specification of the input 
 
 ## Dissection
 
-| Integrationtest | ID                                          |
+| Integration test | ID                                          |
 | --------------- | ------------------------------------------- |
 | Action          | What has to be done to validate the system? |
 | Expected result | What is a valid result?                     |

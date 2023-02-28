@@ -18,11 +18,11 @@ assignees: 'iBrotNano'
 
 ### Description
 
-A user story for functionality from a users perspective (user story) or a description of a system requirement in natural language (scenario).
+A user story for functionality from a user's perspective (user story) or a description of a system requirement in natural language (scenario).
 
 ### Input
 
-What data goes into the system and what is there source?
+What data goes into the system and what is their source?
 
 ### Output
 
@@ -47,7 +47,7 @@ Architecture of the system and/or layout of the GUI. Specification of the input 
 
 ## Dissection
 
-| Integrationtest | ID                                          |
+| Integration test | ID                                          |
 | --------------- | ------------------------------------------- |
 | Action          | What has to be done to validate the system? |
 | Expected result | What is a valid result?                     |
@@ -58,7 +58,7 @@ Architecture of the system and/or layout of the GUI. Specification of the input 
 
 - [ ] Create a `feature` branch
 - [ ] Update the dependencies
-- [ ] Here is the place for development todo items
+- [ ] Here is the place for development to-do items
 - [ ] Check if the exception handling is well done
 - [ ] Check if further tests must be written
 - [ ] Write meaningful comments
