@@ -15,6 +15,9 @@ Version: 4.7.1.1
 
 The project sets up an environment for xUnit tests. This environment makes creating fixtures for .NET tests easy.
 
+## File an issue
+
+You can file an issue here in GitHub. Please use the issue templates "bug report" for bugs and "feature request" for missing features. The other issue types are for internal planning and documentation.
 ## Documentation
 
 You will find all documents written while the development of the project in the Wiki at [Uri to the wiki].
