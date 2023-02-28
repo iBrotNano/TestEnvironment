@@ -1,9 +1,10 @@
 ---
 name: Task
 about: Task that has to be done
-title: 'Summary'
-labels: 'task'
-assignees: 'iBrotNano'
+title: Summary
+labels: task
+assignees: iBrotNano
+
 ---
 
 ## Requirements

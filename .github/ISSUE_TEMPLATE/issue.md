@@ -1,9 +1,10 @@
 ---
 name: Issue
 about: Report a story or scenario
-title: 'Summary'
-labels: 'issue'
-assignees: 'iBrotNano'
+title: Summary
+labels: issue
+assignees: iBrotNano
+
 ---
 
 ## Requirements

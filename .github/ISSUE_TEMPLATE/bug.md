@@ -1,9 +1,10 @@
 ---
 name: Bug
 about: Report a bug
-title: 'Summary'
-labels: 'bug'
-assignees: 'iBrotNano'
+title: Summary
+labels: bug
+assignees: iBrotNano
+
 ---
 
 ## Bug

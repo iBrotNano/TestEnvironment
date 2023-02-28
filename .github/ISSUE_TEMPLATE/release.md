@@ -1,9 +1,10 @@
 ---
 name: Release
 about: Issue to do a release
-title: 'Release vx.x.x'
-labels: 'release'
-assignees: 'iBrotNano'
+title: Release vx.x.x
+labels: ''
+assignees: iBrotNano
+
 ---
 
 ## Details
