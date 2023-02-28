@@ -1,3 +1,11 @@
+---
+name: Issue
+about: Report a story or scenario
+title: 'Issue'
+labels: 'issue'
+assignees: 'iBrotNano'
+---
+
 # Issue-Key - Summary
 
 ## Requirement or bug

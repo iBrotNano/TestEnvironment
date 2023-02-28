@@ -1,4 +1,10 @@
-
+---
+name: task
+about: Task that has to be done
+title: 'Task'
+labels: 'task'
+assignees: 'iBrotNano'
+---
 
 # Issue-Key - Summary
 

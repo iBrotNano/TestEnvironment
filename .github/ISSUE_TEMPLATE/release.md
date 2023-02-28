@@ -1,9 +1,17 @@
+---
+name: Release
+about: Issue to do a release
+title: 'Release'
+labels: 'release'
+assignees: 'iBrotNano'
+---
+
 # Details
 
-| Name      | Value  |
-| :-------- | :----- |
-| Milestone | %1.0.0 |
-| Owner     | @root  |
+| Name      | Value |
+| :-------- | :---- |
+| Milestone | 1.0.0 |
+| Owner     | @root |
 
 ## Todo
 
