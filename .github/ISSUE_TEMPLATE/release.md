@@ -6,14 +6,14 @@ labels: 'release'
 assignees: 'iBrotNano'
 ---
 
-# Details
+## Details
 
 | Name      | Value |
 | :-------- | :---- |
-| Milestone | 1.0.0 |
-| Owner     | @root |
+| Milestone | [1.0.0](Url to Milestone) |
+| Owner     | @owner |
 
-## Todo
+### Todo
 
 - [ ] Create a `release` branch from `master` for the RC
 - [ ] Start the test phase
@@ -31,6 +31,6 @@ assignees: 'iBrotNano'
 - [ ] Backup all project files for documentation
 - [ ] Release the application into production
 
-## Notes
+### Notes
 
 Nothing to mention.

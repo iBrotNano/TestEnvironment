@@ -6,55 +6,55 @@ labels: 'issue'
 assignees: 'iBrotNano'
 ---
 
-# Requirement or bug
+## Requirements
 
-## Open Questions?
+### Open Questions?
 
 1. @Who: What must be discussed?
 
-## Blockers
+### Blockers
 
 1. Something blocks my work.
 
-## Description
+### Description
 
 A user story for functionality from a users perspective (user story) or a description of a system requirement in natural language (scenario).
 
-## Input
+### Input
 
 What data goes into the system and what is there source?
 
-## Output
+### Output
 
 What data goes out of the system and why?
 
-## Conditions
+### Conditions
 
 What conditions must be met? High pressure? Many users?
 
-## Side effects
+### Side effects
 
 Are there any?
 
-# Acceptance tests
+## Acceptance tests
 
 1. First test to validate the requirement.
 1. Second test.
 
-# Design
+## Design
 
 Architecture of the system and/or layout of the GUI. Specification of the input and output data.
 
-# Dissection
+## Dissection
 
 | Integrationtest | ID                                          |
 | --------------- | ------------------------------------------- |
 | Action          | What has to be done to validate the system? |
 | Expected result | What is a valid result?                     |
 
-# Development
+## Development
 
-## TODOs
+### TODOs
 
 - [ ] Create a `feature` branch
 - [ ] Update the dependencies
@@ -68,17 +68,17 @@ Architecture of the system and/or layout of the GUI. Specification of the input 
 - [ ] Phrase a meaningful commit comment
 - [ ] Check-in the changes and push them to the server
 
-## Notes
+### Notes
 
 Notes about the development of the issue.
 
-# Debug
+## Debug
 
 | ID   | Result | Pass |
 | ---- | ------ | ---- |
-| #1   |        | 🟢🔴🟡  |
+| 1   |        | 🟢🔴🟡  |
 
-# Documentation
+## Documentation
 
 - [ ] Do I need a new PIA or update an existing one?
 - [ ] Update the README.md
@@ -87,27 +87,27 @@ Notes about the development of the issue.
 - [ ] Does something in the wiki needed to be updated?
 - [ ] Needs other stuff been documented?
 
-## Decisions
+### Decisions
 
 | Decision          | Description                |
 | ----------------- | -------------------------- |
 | What was decided? | Why was the decision made? |
 
-## PIAs
+### PIAs
 
 Link to related PIA
 
-## Links
+### Links
 
 - [ ]  Any other documentation should be linked here. Intern and extern.
 
-# Demo
+## Demo
 
 - [ ] Setup a fresh demo environment
 
 Results of the acceptance tests.
 
-# Deployment
+## Deployment
 
 - [ ] Merge `feature` into `master`  with a `squash` and remove the `feature` branch
 - [ ] Check if the compiled artifact is valid

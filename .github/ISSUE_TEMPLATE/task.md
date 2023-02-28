@@ -6,47 +6,47 @@ labels: 'task'
 assignees: 'iBrotNano'
 ---
 
-# Requirement
+## Requirements
 
-## Open Questions?
+### Open Questions?
 
 1. @Who: What must be discussed?
 
-## Blockers
+### Blockers
 
 1. Something blocks my work.
 
-## Description
+### Description
 
 What has to be done?
 
-## Conditions
+### Conditions
 
 What conditions must be met? High pressure? Many users?
 
-## Side effects
+### Side effects
 
 Are there any?
 
-# Acceptance tests
+## Acceptance tests
 
 1. First test to validate the requirement.
 1. Second test.
 
-# Design
+## Design
 
 How can the task be done?
 
-# Dissection
+## Dissection
 
 | Integrationtest | ID                                          |
 | --------------- | ------------------------------------------- |
 | Action          | What has to be done to validate the system? |
 | Expected result | What is a valid result?                     |
 
-# Development
+## Development
 
-## TODOs
+### TODOs
 
 - [ ] Create a `feature` branch if needed (Maybe configuration changes or new project files)
 - [ ] Update the dependencies
@@ -60,17 +60,17 @@ How can the task be done?
 - [ ] Phrase a meaningful commit comment
 - [ ] Check-in the changes and push them to the server
 
-## Notes
+### Notes
 
 Notes about the development of the issue.
 
-# Debug
+## Debug
 
 | ID   | Result | Pass |
 | ---- | ------ | ---- |
-| #1   |        | 🟢🔴🟡  |
+| 1   |        | 🟢🔴🟡  |
 
-# Documentation
+## Documentation
 
 - [ ] Do I need a new PIA or update an existing one?
 - [ ] Update the README.md
@@ -79,27 +79,27 @@ Notes about the development of the issue.
 - [ ] Does something in the wiki needed to be updated?
 - [ ] Needs other stuff been documented?
 
-## Decisions
+### Decisions
 
 | Decision          | Description                |
 | ----------------- | -------------------------- |
 | What was decided? | Why was the decision made? |
 
-## PIAs
+### PIAs
 
 Link to related PIA
 
-## Links
+### Links
 
 - [ ] Any other documentation should be linked here. Intern and extern.
 
-# Demo
+## Demo
 
 - [ ] Setup a fresh demo environment
 
 Results of the acceptance tests.
 
-# Deployment
+## Deployment
 
 - [ ] Merge `feature` into `master`  with a `squash` and remove the `feature` branch
 - [ ] Check if the compiled artifact is valid
