@@ -1,7 +1,7 @@
 ---
 name: Release
 about: Issue to do a release
-title: 'Release'
+title: 'Release vx.x.x'
 labels: 'release'
 assignees: 'iBrotNano'
 ---
