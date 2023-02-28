@@ -1,0 +1,19 @@
+name: feature Request
+description: Ask for a feature
+title: "Summary"
+labels: ["feature request"]
+assignees:
+  - iBrotNano
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question. I helps to improve the software.
+  - type: textarea
+    id: feature
+    attributes:
+      label: What feature are you missing?
+      description: Please describe it as accurate as you can what feature you are missing.
+      placeholder: What feature are you missing?
+    validations:
+      required: true
