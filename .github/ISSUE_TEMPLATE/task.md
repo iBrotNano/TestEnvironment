@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Task that has to be done
+about: Not intended for users! 
 title: Summary
 labels: task
 assignees: iBrotNano

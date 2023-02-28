@@ -1,6 +1,6 @@
 ---
 name: Issue
-about: Report a story or scenario
+about: Not intended for users! 
 title: Summary
 labels: issue
 assignees: iBrotNano

@@ -1,6 +1,6 @@
 ---
 name: Release
-about: Issue to do a release
+about: Not intended for users! 
 title: Release vx.x.x
 labels: ''
 assignees: iBrotNano

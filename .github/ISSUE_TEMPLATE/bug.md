@@ -1,6 +1,6 @@
 ---
 name: Bug
-about: Report a bug
+about: Not intended for users! 
 title: Summary
 labels: bug
 assignees: iBrotNano
