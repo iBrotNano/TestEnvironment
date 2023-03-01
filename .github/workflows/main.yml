@@ -55,10 +55,12 @@ jobs:
         git_tag_prefix: "v"
     - name: Build
       run: dotnet build --no-restore -c Release
+    - name: Test
+      run: dotnet test -c Release --no-build --verbosity normal
+    - name: Pack
+      run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true'
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3.1.2
       with:
         name: projectfiles
         path: /home/runner/work/TestEnvironment/TestEnvironment/*
-    - name: Test
-      run: dotnet test -c Release --no-build --verbosity normal

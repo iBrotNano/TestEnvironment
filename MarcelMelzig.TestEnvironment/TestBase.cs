@@ -63,11 +63,6 @@
         #region Properties
 
         /// <summary>
-        /// A stub to test paths.
-        /// </summary>
-        public string PathStub = Consts.PathStub;
-
-        /// <summary>
         /// A temporary data folder for integration tests. Don't use it in unit tests. Mock the file
         /// system instead.
         /// </summary>
@@ -87,6 +82,11 @@
         /// A single point to access factory methods to build test fixtures.
         /// </summary>
         public FixtureFactory FixtureFactory => new();
+
+        /// <summary>
+        /// A stub to test paths.
+        /// </summary>
+        public string PathStub => Consts.PathStub;
 
         /// <summary>
         /// A service provider used in tests.
