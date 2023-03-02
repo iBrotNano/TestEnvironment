@@ -30,7 +30,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Generate package version
-      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\//-}-$VERSION_BUILD" >> $GITHUB_ENV
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\/#/-}-$VERSION_BUILD" >> $GITHUB_ENV
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
     - name: Generate file version
