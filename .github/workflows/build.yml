@@ -37,13 +37,13 @@ jobs:
       run: echo "FILE_VERSION=$(date +'%Y.%-m%-d.%-H%-M.%-S')" >> $GITHUB_ENV
     - name: Versioning
       run: |
-        echo "Package version is $PACKAGE_VERSION" \
-        && echo "File version is $FILE_VERSION" \
-        && echo "Assembly version is $ASSEMBLY_VERSION" \
-        && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/<PackageVersion>$PACKAGE_VERSION<\/PackageVersion>/g" Directory.Build.props \
-        && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/<FileVersion>$FILE_VERSION<\/FileVersion>/g" Directory.Build.props \
-        && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" Directory.Build.props \
-        && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props \
+        echo "Package version is $PACKAGE_VERSION"
+        && echo "File version is $FILE_VERSION"
+        && echo "Assembly version is $ASSEMBLY_VERSION"
+        && sed -i -e "s/<PackageVersion>4.7.11<\/PackageVersion>/<PackageVersion>$PACKAGE_VERSION<\/PackageVersion>/g" Directory.Build.props
+        && sed -i -e "s/<FileVersion>4.7.1.1<\/FileVersion>/<FileVersion>$FILE_VERSION<\/FileVersion>/g" Directory.Build.props
+        && sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" Directory.Build.props
+        && sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props
         && sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" README.md
     - name: pkgdeps/git-tag-action
       uses: pkgdeps/git-tag-action@v2.0.1
