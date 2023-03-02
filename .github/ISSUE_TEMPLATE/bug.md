@@ -98,7 +98,7 @@ Notes about the development of the issue.
 
 ### Decisions
 
-| Decision          | Description                |
+| Decision          | Cause                      |
 | ----------------- | -------------------------- |
 | What was decided? | Why was the decision made? |
 
