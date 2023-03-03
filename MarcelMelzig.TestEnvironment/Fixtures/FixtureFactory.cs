@@ -21,7 +21,7 @@
         /// Creates a <see cref="IConfigurationRoot" /> in memory for test purposes.
         /// </summary>
         /// <param name="configurationSource">
-        /// The configurationtion data.
+        /// The configuration data.
         /// </param>
         /// <returns>
         /// An <see cref="IConfigurationRoot" />.

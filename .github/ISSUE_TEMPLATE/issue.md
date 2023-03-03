@@ -90,7 +90,7 @@ Notes about the development of the issue.
 
 ### Decisions
 
-| Decision          | Description                |
+| Decision          | Cause                      |
 | ----------------- | -------------------------- |
 | What was decided? | Why was the decision made? |
 
@@ -100,7 +100,7 @@ Link to related PIA
 
 ### Links
 
-- [ ]  Any other documentation should be linked here. Intern and extern.
+- Any other documentation should be linked here. Intern and extern.
 
 ## Demo
 

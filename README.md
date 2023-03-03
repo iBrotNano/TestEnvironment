@@ -1,9 +1,8 @@
 | Name                       | Status                                                       |
 | -------------------------- | ------------------------------------------------------------ |
-| Pipeline for `master`      | [![pipeline status](https://gitlab.3h-co.de/private/project/badges/master/pipeline.svg)](https://gitlab.3h-co.de/private/project/-/commits/master) |
+| Pipeline for `main`        | ![pipeline status for main](https://github.com/iBrotNano/TestEnvironment/actions/workflows/build.yml/badge.svg) |
+| Pipeline for `production`  | ![pipeline status for main](https://github.com/iBrotNano/TestEnvironment/actions/workflows/build.yml/badge.svg?branch=production) |
 | Code coverage for `master` | [![coverage report](https://gitlab.3h-co.de/private/project/badges/master/coverage.svg)](https://gitlab.3h-co.de/private/project/-/commits/master) |
-
-[[_TOC_]]
 
 # Readme
 
@@ -17,10 +16,10 @@ The project sets up an environment for xUnit tests. This environment makes creat
 
 ## File an issue
 
-You can file an issue here in GitHub. Please use the issue templates "bug report" for bugs and "feature request" for missing features. The other issue types are for internal planning and documentation.
+You can file an issue here in GitHub. Please use the issue templates "bug report" for bugs and "feature request" for missing features. The other issue types are for internal planning and documentation. Those issue types are form which will lead you through the reporting process.
 ## Documentation
 
-You will find all documents written while the development of the project in the Wiki at [Uri to the wiki].
+You will find all documentation for the library in the [wiki](https://github.com/iBrotNano/TestEnvironment/wiki).
 
 The api documentation will be published at [Uri to the api docs].
 
@@ -376,8 +375,12 @@ public class Lesson_6_DatabaseReadTestBase2
 You can clone the project with:
 
 ```bash
-git clone https://username@repository.uri/project.git
+git clone https://github.com/iBrotNano/TestEnvironment.git
 ```
+
+### Contribute
+
+Your help is welcome. File an issue or even commit code. You can fork this project and make pull requests if you have cool new features or bug fixes.
 
 ### Environment
 
@@ -400,8 +403,6 @@ git lfs track "*.format-extension"
 Regular NuGets are obtained from the NuGet Repository. This is managed and hosted by Microsoft. It is already preconfigured in Visual Studio. No further steps are necessary.
 
 ## Known Issues
-
-No issues are known. Happy coding!
 
 ### Dependencies in test projects
 

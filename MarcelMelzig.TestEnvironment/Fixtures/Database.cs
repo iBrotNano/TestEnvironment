@@ -15,10 +15,13 @@
         /// </typeparam>
         /// <param name="provider">
         /// The type of InMemory database provider to use. The Type is defined by the enumeration
-        /// <see cref="InMemoryProviders" />.
+        /// <see cref="InMemoryProvider" />.
         /// </param>
         /// <param name="sqliteConnection">
         /// A connection for a SQLite database. It must be passed in when a SQLite database is used.
+        /// </param>
+        /// <param name="seedAction">
+        /// Method to seed test data.
         /// </param>
         /// <returns>
         /// DbContext of an in memory test database.
@@ -78,7 +81,7 @@
         /// </typeparam>
         /// <param name="provider">
         /// The type of InMemory database provider to use. The Type is defined by the enumeration
-        /// <see cref="InMemoryProviders" />.
+        /// <see cref="InMemoryProvider" />.
         /// </param>
         /// <param name="sqliteConnection">
         /// A connection for a SQLite database. It must be passed in when a SQLite database is used.
