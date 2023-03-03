@@ -30,7 +30,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Generate package version for regular builds
-      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\/#/}-$VERSION_BUILD" >> $GITHUB_ENV
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\/#/-}-$VERSION_BUILD" >> $GITHUB_ENV
       if: github.event_name != 'pull_request'
     - name: Generate package version for PRs
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-PR-$VERSION_BUILD" >> $GITHUB_ENV
