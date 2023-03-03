@@ -29,11 +29,12 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Generate package version
-      run: |
-        SLASH_CLEANED_VERSION_SUFFIX=${VERSION_SUFFIX/\//}
-        SHARP_CLEANED_VERSION_SUFFIX=${SLASH_CLEANED_VERSION_SUFFIX/\#/}
-        echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-$SHARP_CLEANED_VERSION_SUFFIX-$VERSION_BUILD" >> $GITHUB_ENV
+    - name: Generate package version for regular builds
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\/#/}-$VERSION_BUILD" >> $GITHUB_ENV
+      if: github.event_name != 'pull_request'
+    - name: Generate package version for PRs
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-PR-$VERSION_BUILD" >> $GITHUB_ENV
+      if: github.event_name == 'pull_request'
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
     - name: Generate file version
