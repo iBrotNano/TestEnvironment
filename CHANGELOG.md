@@ -9,3 +9,4 @@
 - [Add issue templates to the repo #2](https://github.com/iBrotNano/TestEnvironment/issues/2)
 - [Tag the version of a build by an action #3](https://github.com/iBrotNano/TestEnvironment/issues/3)
 - [Create a multi target build #11](https://github.com/iBrotNano/TestEnvironment/issues/11)
+- [Configure source link #10](https://github.com/iBrotNano/TestEnvironment/issues/10)

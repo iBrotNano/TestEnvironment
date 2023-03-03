@@ -402,6 +402,10 @@ git lfs track "*.format-extension"
 
 Regular NuGets are obtained from the NuGet Repository. This is managed and hosted by Microsoft. It is already preconfigured in Visual Studio. No further steps are necessary.
 
+SourceLink is configured for the TestEnvironment NuGet. You can use it to debug into the library with Visual Studio.
+
+[Source Link and .NET libraries | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/sourcelink)
+
 ## Known Issues
 
 ### Dependencies in test projects
