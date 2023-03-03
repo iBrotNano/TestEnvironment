@@ -118,6 +118,6 @@ Results of the acceptance tests.
 
 ## Deployment
 
-- [ ] Merge `feature` into `master`  or `hotfix` into `production` and `master` with a `squash` and remove the `bugfix` branch
+- [ ] Merge `feature` into `master` or `hotfix` into `production` and `master` with a `squash` and remove the `bugfix` branch
 - [ ] Check if the compiled artifact is valid
 - [ ] Cleanup the Git history locally on the dev system

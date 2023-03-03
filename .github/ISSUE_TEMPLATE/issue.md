@@ -110,6 +110,6 @@ Results of the acceptance tests.
 
 ## Deployment
 
-- [ ] Merge `feature` into `master`  with a `squash` and remove the `feature` branch
+- [ ] Merge `feature` into `master` with a `squash` and remove the `feature` branch
 - [ ] Check if the compiled artifact is valid
 - [ ] Cleanup the Git history locally on the dev system
