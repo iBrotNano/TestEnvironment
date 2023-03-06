@@ -62,7 +62,7 @@ jobs:
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Pack
-      run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
+      run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3.1.2
       with:
