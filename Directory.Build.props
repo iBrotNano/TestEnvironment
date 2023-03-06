@@ -6,7 +6,7 @@
 		<AssemblyVersion>4.7.1.1</AssemblyVersion>
 		<Authors>Marcel Melzig</Authors>
 		<Description>Implements a test environment.</Description>
-		<Copyright>© Marcel Melzig</Copyright>
+		<Copyright>Â© Marcel Melzig</Copyright>
 		<PackageTags>test environment xunit</PackageTags>
 		<Title>Test Environment</Title>
 		<PackageIcon>Seat-Belt-256.png</PackageIcon>
@@ -30,6 +30,7 @@
 
 	<PropertyGroup Condition="'$(CONTINUOUS_INTEGRATION_BUILD)' == 'true'">
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	  <Deterministic>True</Deterministic>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(CREATE_NUGET)' == 'true'">
