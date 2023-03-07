@@ -30,7 +30,7 @@
 
 	<PropertyGroup Condition="'$(CONTINUOUS_INTEGRATION_BUILD)' == 'true'">
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-	  <Deterministic>True</Deterministic>
+		<Deterministic>True</Deterministic>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(CREATE_NUGET)' == 'true'">

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
@@ -36,6 +36,7 @@
 		<PackageReference Include="Moq" />
 		<PackageReference Include="Shouldly">
 			<TreatAsUsed>true</TreatAsUsed>
+			<ExcludeAssets>build</ExcludeAssets>
 		</PackageReference>
 		<PackageReference Include="xunit.extensibility.core" />
 	</ItemGroup>
