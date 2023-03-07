@@ -1,38 +1,48 @@
 <Project>
 	<PropertyGroup>
+		<!-- Here are the version used for the assemblies and the NuGet package. 
+		The fix versions 4.7.1.1 or 4.7.11 are replaced with the real version by 
+		the build server. -->
 		<PackageVersion>4.7.11</PackageVersion>
 		<FileVersion>4.7.1.1</FileVersion>
 		<InformationalVersion>4.7.11</InformationalVersion>
 		<AssemblyVersion>4.7.1.1</AssemblyVersion>
+		<!-- This is metadata about the package. It is used to pack the NuGet. -->
 		<Authors>Marcel Melzig</Authors>
 		<Description>Implements a test environment.</Description>
 		<Copyright>© Marcel Melzig</Copyright>
-		<PackageTags>test environment xunit</PackageTags>
+		<PackageTags>test environment xunit tdd</PackageTags>
 		<Title>Test Environment</Title>
 		<PackageIcon>Seat-Belt-256.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>Git</RepositoryType>
 		<PackageReleaseNotes>Initial version.</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<!-- Here some configuration for the development and the build of this project is done. -->
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>1701;1702;1591</NoWarn>
+		<NeutralLanguage>en</NeutralLanguage>
+		<!-- Shows warnings for the source code to improve the quality. -->
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<AnalysisMode>Recommended</AnalysisMode>
 		<AnalysisLevel>latest</AnalysisLevel>
+		<!-- Saves the test results into a file. -->
 		<VSTestLogger>trx</VSTestLogger>
 		<VSTestResultsDirectory>$(MSBuildThisFileDirectory)target\tests</VSTestResultsDirectory>
+		<!-- Configuration for SourceLink. -->
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<DebugType>embedded</DebugType>
 		<PackageOutputPath>$(MSBuildThisFileDirectory)target\nugets\$(Configuration)</PackageOutputPath>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<NoWarn>1701;1702;1591</NoWarn>
-		<NeutralLanguage>en</NeutralLanguage>
 	</PropertyGroup>
 
+	<!-- Deterministic build on the build server. -->
 	<PropertyGroup Condition="'$(CONTINUOUS_INTEGRATION_BUILD)' == 'true'">
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 		<Deterministic>True</Deterministic>
 	</PropertyGroup>
 
+	<!-- Creates a NuGet. -->
 	<PropertyGroup Condition="'$(CREATE_NUGET)' == 'true'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
