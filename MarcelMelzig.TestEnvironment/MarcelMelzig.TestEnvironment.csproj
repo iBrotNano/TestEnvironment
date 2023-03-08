@@ -1,33 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Authors>Marcel Melzig</Authors>
-		<Description>Implements a test environment.</Description>
-		<Copyright>© Marcel Melzig</Copyright>
-		<PackageTags>test environment xunit</PackageTags>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Title>Test Environment</Title>
-		<PackageIcon>Seat-Belt-256.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryType>Git</RepositoryType>
-		<PackageReleaseNotes>Initial version.</PackageReleaseNotes>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<EnableNETAnalyzers>true</EnableNETAnalyzers>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<NoWarn>1701;1702;1591</NoWarn>
-		<Optimize>False</Optimize>
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<NoWarn>1701;1702;1591</NoWarn>
-		<Optimize>True</Optimize>
-		<Deterministic>True</Deterministic>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -60,6 +36,7 @@
 		<PackageReference Include="Moq" />
 		<PackageReference Include="Shouldly">
 			<TreatAsUsed>true</TreatAsUsed>
+			<ExcludeAssets>build</ExcludeAssets>
 		</PackageReference>
 		<PackageReference Include="xunit.extensibility.core" />
 	</ItemGroup>
