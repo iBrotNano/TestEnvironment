@@ -36,7 +36,7 @@ jobs:
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-PR-$VERSION_BUILD" >> $GITHUB_ENV
       if: github.event_name == 'pull_request'
     - name: Generate package version for production builds
-      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH.$VERSION_BUILD" >> $GITHUB_ENV
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH" >> $GITHUB_ENV
       if: github.ref_name == 'production'
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
@@ -71,4 +71,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: projectfiles
-        path: /home/runner/work/TestEnvironment/TestEnvironment/*.nuget
+        path: /home/runner/work/TestEnvironment/TestEnvironment/target/nugets/$(Configuration)/*
