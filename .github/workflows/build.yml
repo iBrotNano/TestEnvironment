@@ -10,7 +10,7 @@ env:
 on:
   workflow_dispatch:
   push:
-    branches: [ "main", "feature/*", "bugfix/*" ]
+    branches: [ "main", "feature/*", "bugfix/*", "production" ]
   pull_request:
     branches: [ "main", "production" ]
 
