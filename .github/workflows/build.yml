@@ -67,8 +67,8 @@ jobs:
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
-    - name: Upload Build Artifacts
+    - name: Upload Nuget
       uses: actions/upload-artifact@v3.1.2
       with:
         name: projectfiles
-        path: /home/runner/work/TestEnvironment/TestEnvironment/*
+        path: /home/runner/work/TestEnvironment/TestEnvironment/*.nuget
