@@ -60,7 +60,7 @@ jobs:
         git_commit_sha: ${{ github.sha }}
         version: ${{ env.PACKAGE_VERSION }}
         git_tag_prefix: "v"
-        if: github.ref_name == 'production'
+      if: github.ref_name == 'production'
     - name: Build
       run: dotnet build --no-restore -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: Test
