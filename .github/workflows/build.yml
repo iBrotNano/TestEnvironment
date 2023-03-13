@@ -53,14 +53,14 @@ jobs:
         sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props
         sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" README.md
     - name: pkgdeps/git-tag-action
-      uses: pkgdeps/git-tag-action@v2.0.1
+      uses: pkgdeps/git-tag-action@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         github_repo: ${{ github.repository }}
         git_commit_sha: ${{ github.sha }}
         version: ${{ env.PACKAGE_VERSION }}
         git_tag_prefix: "v"
-        if: github.ref_name == 'production'
+      if: github.ref_name == 'production'
     - name: Build
       run: dotnet build --no-restore -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: Test
@@ -68,7 +68,7 @@ jobs:
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: Upload Nuget
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v3
       with:
         name: projectfiles
         path: /home/runner/work/TestEnvironment/TestEnvironment/*.nuget
