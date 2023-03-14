@@ -83,4 +83,4 @@ jobs:
         dotnet nuget push "target/nugets/Release/MarcelMelzig.TestEnvironment.$PACKAGE_VERSION.nupkg" --source "github"
     - name: Release
       uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+      if: github.ref_name == 'production'
