@@ -91,4 +91,4 @@ jobs:
           CHANGELOG.md
         body_path: CHANGELOG.md
         draft: true
-        tag_name: "v$PACKAGE_VERSION"
+        tag_name: "v${{ env.PACKAGE_VERSION }}"
