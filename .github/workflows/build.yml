@@ -70,5 +70,5 @@ jobs:
     - name: Upload Nuget
       uses: actions/upload-artifact@v3
       with:
-        name: projectfiles
-        path: /home/runner/work/TestEnvironment/target/nugets/Release/*
+        name: NuGet
+        path: /home/runner/work/TestEnvironment/TestEnvironment/target/nugets/Release/*
