@@ -84,3 +84,11 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       if: github.ref_name == 'production'
+      with:
+        files: |
+          README.md
+          LICENSE
+          CHANGELOG.md
+        body_path: CHANGELOG.md
+        draft: true
+        tag_name: "v$PACKAGE_VERSION"
