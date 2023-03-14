@@ -72,3 +72,8 @@ jobs:
       with:
         name: NuGet
         path: /home/runner/work/TestEnvironment/TestEnvironment/target/nugets/Release/*
+    - name: Upload Docs
+      uses: actions/upload-artifact@v3
+      with:
+        name: Docs
+        path: /home/runner/work/TestEnvironment/TestEnvironment/*.md
