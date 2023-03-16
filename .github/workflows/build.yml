@@ -93,5 +93,3 @@ jobs:
         body_path: CHANGELOG.md
         draft: true
         tag_name: "v${{ env.PACKAGE_VERSION }}"
-        generate_release_notes: true
-        append_body: true
