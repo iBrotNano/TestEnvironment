@@ -9,7 +9,6 @@
 		<AssemblyVersion>4.7.1.1</AssemblyVersion>
 		<!-- This is metadata about the package. It is used to pack the NuGet. -->
 		<Authors>Marcel Melzig</Authors>
-		<Description>Implements a test environment.</Description>
 		<Copyright>© Marcel Melzig</Copyright>
 		<PackageTags>test environment xunit tdd</PackageTags>
 		<Title>Test Environment</Title>
@@ -52,6 +51,7 @@
 		</ReadLinesFromFile>
 		<PropertyGroup>
 			<PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>
+			<Description>@(ReleaseNoteLines, '%0a')</Description>
 		</PropertyGroup>
 	</Target>
 </Project>
