@@ -1,32 +1,32 @@
-name: build
+name: build # Name of the action
 
 env:
-  VERSION_MAJOR: 1
-  VERSION_MINOR: 0
-  VERSION_PATCH: 5
-  VERSION_BUILD: ${{ github.run_number }}
-  VERSION_SUFFIX: ${{ github.ref_name }}
+  VERSION_MAJOR: 1 # Major version of the package. Will be set in the project and binaries.
+  VERSION_MINOR: 0 # Minor version of the package. Will be set in the project and binaries.
+  VERSION_PATCH: 5 # Patch version of the package. Will be set in the project and binaries.
+  VERSION_BUILD: ${{ github.run_number }} # The run number is used as a build number for the version.
+  VERSION_SUFFIX: ${{ github.ref_name }} # The branch name is used to generate a suffix for pre-releases.
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Start a run through the UI.
   push:
-    branches: [ "main", "feature/*", "bugfix/*", "production" ]
+    branches: [ "main", "feature/*", "bugfix/*", "production" ] # Starts on pushes to this branches.
   pull_request:
-    branches: [ "main", "production" ]
+    branches: [ "main", "production" ] # Starts on pull requests to this branches.
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Uses this image for building.
     
-    permissions: write-all
+    permissions: write-all # Needed to write tags and perform other tasks.
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3 # Git checkout
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 7.0.x
+        dotnet-version: 7.0.x # The used .NET version.
     - name: Restore dependencies
       run: dotnet restore
     - name: Generate package version for regular builds
@@ -68,7 +68,7 @@ jobs:
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
-    - name: NuGet Repo Cleanup
+    - name: NuGet Repo Cleanup # Removes old pre-release packages from GitHub'S NuGet repository.
       uses: actions/delete-package-versions@v4
       with:
         package-name: MarcelMelzig.TestEnvironment
@@ -89,7 +89,7 @@ jobs:
       run: |
         dotnet nuget add source --username iBrotNano --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/iBrotNano/index.json"
         dotnet nuget push "target/nugets/Release/MarcelMelzig.TestEnvironment.$PACKAGE_VERSION.nupkg" --source "github"
-    - name: Release
+    - name: Create release draft
       uses: softprops/action-gh-release@v1
       if: github.ref_name == 'production'
       with:
