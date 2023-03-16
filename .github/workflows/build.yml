@@ -68,6 +68,13 @@ jobs:
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
+    - name: NuGet Repo Cleanup
+      uses: actions/delete-package-versions@v4
+      with:
+        package-name: MarcelMelzig.TestEnvironment
+        package-type: nuget
+        min-versions-to-keep: 1
+        delete-only-pre-release-versions: true
     - name: Upload Nuget
       uses: actions/upload-artifact@v3
       with:
