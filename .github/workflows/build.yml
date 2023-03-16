@@ -52,6 +52,7 @@ jobs:
         sed -i -e "s/<InformationalVersion>4.7.11<\/InformationalVersion>/<InformationalVersion>$PACKAGE_VERSION<\/InformationalVersion>/g" Directory.Build.props
         sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props
         sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" README.md
+        sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" CHANGELOG.md
     - name: pkgdeps/git-tag-action
       uses: pkgdeps/git-tag-action@v2
       with:
@@ -92,3 +93,5 @@ jobs:
         body_path: CHANGELOG.md
         draft: true
         tag_name: "v${{ env.PACKAGE_VERSION }}"
+        generate_release_notes: true
+        append_body: true
