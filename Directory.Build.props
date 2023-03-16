@@ -51,8 +51,7 @@
 			<Output TaskParameter="Lines" ItemName="ReleaseNoteLines"/>
 		</ReadLinesFromFile>
 		<PropertyGroup>
-			<!--<PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>-->
-			<PackageReleaseNotes>TEST</PackageReleaseNotes>
+			<PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>
 		</PropertyGroup>
 	</Target>
 </Project>
