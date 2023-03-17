@@ -24,15 +24,11 @@ A fully automatic build pipeline is set up for the project. So you can await new
 
 ### All Changes
 
-- [Set the version by an action #1](https://github.com/iBrotNano/TestEnvironment/issues/1)
-- [Add issue templates to the repo #2](https://github.com/iBrotNano/TestEnvironment/issues/2)
-- [Tag the version of a build by an action #3](https://github.com/iBrotNano/TestEnvironment/issues/3)
-- [Create a multi target build #11](https://github.com/iBrotNano/TestEnvironment/issues/11)
-- [Configure source link #10](https://github.com/iBrotNano/TestEnvironment/issues/10)
-- [Build a deterministic build #9](https://github.com/iBrotNano/TestEnvironment/issues/9)
+- [#1](https://github.com/iBrotNano/TestEnvironment/issues/1) Set the version by an action 
+- [#2](https://github.com/iBrotNano/TestEnvironment/issues/2) Add issue templates to the repo
+- [#3](https://github.com/iBrotNano/TestEnvironment/issues/3) Tag the version of a build by an action
+- [#11](https://github.com/iBrotNano/TestEnvironment/issues/11) Create a multi target build
+- [#10](https://github.com/iBrotNano/TestEnvironment/issues/10) Configure source link
+- [#9](https://github.com/iBrotNano/TestEnvironment/issues/9) Build a deterministic build
+- [#8](https://github.com/iBrotNano/TestEnvironment/issues/8) Add a production build action
 
-### Updated Dependencies
-
-| Name                   | Version |
-| ---------------------- | ------- |
-| Name    | version   |
