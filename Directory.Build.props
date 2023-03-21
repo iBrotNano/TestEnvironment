@@ -16,7 +16,6 @@
 		<PackageIcon>Seat-Belt-256.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>Git</RepositoryType>
-		<PackageReleaseNotes>Initial version.</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<!-- Here some configuration for the development and the build of this project is done. -->
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -46,4 +45,13 @@
 	<PropertyGroup Condition="'$(CREATE_NUGET)' == 'true'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
+
+	<Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
+		<ReadLinesFromFile File="../CHANGELOG.md" >
+			<Output TaskParameter="Lines" ItemName="ReleaseNoteLines"/>
+		</ReadLinesFromFile>
+		<PropertyGroup>
+			<PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>
+		</PropertyGroup>
+	</Target>
 </Project>
