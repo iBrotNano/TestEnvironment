@@ -9,6 +9,10 @@ assignees: iBrotNano
 
 ## Bug
 
+### Description
+
+A description of the faulty behavior.
+
 ### Open Questions?
 
 1. @Who: What must be discussed?
@@ -16,10 +20,6 @@ assignees: iBrotNano
 ### Blockers
 
 1. Something blocks my work.
-
-### Description
-
-A description of the faulty behavior.
 
 #### How to reproduce
 

@@ -4,14 +4,13 @@
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<PackageProjectUrl>https://github.com/iBrotNano/TestEnvironment</PackageProjectUrl>
+		<PackageIcon />
+		<PackageTags>test environment xunit tdd setup fixtures</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-		<None Include="..\Seat-Belt-256.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
