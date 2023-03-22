@@ -53,7 +53,7 @@ jobs:
         sed -i -e "s/<AssemblyVersion>4.7.1.1<\/AssemblyVersion>/<AssemblyVersion>$ASSEMBLY_VERSION<\/AssemblyVersion>/g" Directory.Build.props
         sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" README.md
         sed -i -e "s/4.7.1.1/$PACKAGE_VERSION/g" CHANGELOG.md
-    - name: pkgdeps/git-tag-action
+    - name: Tag the version in Git
       uses: pkgdeps/git-tag-action@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -73,7 +73,7 @@ jobs:
       with:
         package-name: MarcelMelzig.TestEnvironment
         package-type: nuget
-        min-versions-to-keep: 1
+        min-versions-to-keep: 10
         delete-only-pre-release-versions: true
     - name: Upload Nuget
       uses: actions/upload-artifact@v3
@@ -89,6 +89,12 @@ jobs:
       run: |
         dotnet nuget add source --username iBrotNano --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/iBrotNano/index.json"
         dotnet nuget push "target/nugets/Release/MarcelMelzig.TestEnvironment.$PACKAGE_VERSION.nupkg" --source "github"
+    - name: Publish To nuget.org
+      run: |
+        dotnet nuget push "target/nugets/Release/MarcelMelzig.TestEnvironment.$PACKAGE_VERSION.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json 
+      if: github.ref_name == 'production'
+      env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
     - name: Create release draft
       uses: softprops/action-gh-release@v1
       if: github.ref_name == 'production'

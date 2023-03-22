@@ -9,6 +9,10 @@ assignees: iBrotNano
 
 ## Requirements
 
+### Description
+
+What has to be done?
+
 ### Open Questions?
 
 1. @Who: What must be discussed?
@@ -16,10 +20,6 @@ assignees: iBrotNano
 ### Blockers
 
 1. Something blocks my work.
-
-### Description
-
-What has to be done?
 
 ### Conditions
 
@@ -51,6 +51,7 @@ How can the task be done?
 
 - [ ] Create a `feature` branch if needed (Maybe configuration changes or new project files)
 - [ ] Update the dependencies
+- [ ] Document the updated dependencies in CHANGELOG.md
 - [ ] Here is the place for development todo items
 - [ ] Check if the exception handling is well done
 - [ ] Check if further tests must be written

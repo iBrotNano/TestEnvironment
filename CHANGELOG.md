@@ -4,7 +4,7 @@
 
 ### Installation
 
-The NuGet can be installed from GitHub’s NuGet Repository.
+The NuGet can be installed from GitHub’s NuGet Repository. Releases can be installed from nuget.org.
 
 ---
 
@@ -31,4 +31,16 @@ A fully automatic build pipeline is set up for the project. So you can await new
 - [#10](https://github.com/iBrotNano/TestEnvironment/issues/10) Configure source link
 - [#9](https://github.com/iBrotNano/TestEnvironment/issues/9) Build a deterministic build
 - [#8](https://github.com/iBrotNano/TestEnvironment/issues/8) Add a production build action
+- [#6](https://github.com/iBrotNano/TestEnvironment/issues/6) Push the NuGet to nuget.org
 
+### Updated Dependencies
+
+| Name                                   | Previous Version | New Version |
+| -------------------------------------- | ---------------- | ----------- |
+| Microsoft.Data.Sqlite.Core             | 7.0.3            | 7.0.4       |
+| Microsoft.EntityFrameworkCore          | 6.0.14           | 6.0.15      |
+| Microsoft.EntityFrameworkCore          | 7.0.3            | 7.0.4       |
+| Microsoft.EntityFrameworkCore.InMemory | 6.0.14           | 6.0.15      |
+| Microsoft.EntityFrameworkCore.InMemory | 7.0.3            | 7.0.4       |
+| Microsoft.EntityFrameworkCore.Sqlite   | 6.0.14           | 6.0.15      |
+| Microsoft.EntityFrameworkCore.Sqlite   | 7.0.3            | 7.0.4       |

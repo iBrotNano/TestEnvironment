@@ -9,6 +9,10 @@ assignees: iBrotNano
 
 ## Requirements
 
+### Description
+
+A user story for functionality from a user's perspective (user story) or a description of a system requirement in natural language (scenario).
+
 ### Open Questions?
 
 1. @Who: What must be discussed?
@@ -16,10 +20,6 @@ assignees: iBrotNano
 ### Blockers
 
 1. Something blocks my work.
-
-### Description
-
-A user story for functionality from a user's perspective (user story) or a description of a system requirement in natural language (scenario).
 
 ### Input
 
@@ -59,6 +59,7 @@ Architecture of the system and/or layout of the GUI. Specification of the input 
 
 - [ ] Create a `feature` branch
 - [ ] Update the dependencies
+- [ ] Document the updated dependencies in CHANGELOG.md
 - [ ] Here is the place for development to-do items
 - [ ] Check if the exception handling is well done
 - [ ] Check if further tests must be written
