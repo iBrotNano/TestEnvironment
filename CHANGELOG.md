@@ -4,7 +4,7 @@
 
 ### Installation
 
-The NuGet can be installed from GitHub’s NuGet Repository.
+The NuGet can be installed from GitHub’s NuGet Repository. Releases can be installed from nuget.org.
 
 ---
 
@@ -31,6 +31,7 @@ A fully automatic build pipeline is set up for the project. So you can await new
 - [#10](https://github.com/iBrotNano/TestEnvironment/issues/10) Configure source link
 - [#9](https://github.com/iBrotNano/TestEnvironment/issues/9) Build a deterministic build
 - [#8](https://github.com/iBrotNano/TestEnvironment/issues/8) Add a production build action
+- [#6](https://github.com/iBrotNano/TestEnvironment/issues/6) Push the NuGet to nuget.org
 
 ### Updated Dependencies
 

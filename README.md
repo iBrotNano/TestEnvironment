@@ -14,15 +14,19 @@ Version: 4.7.1.1
 
 The project sets up an environment for xUnit tests. This environment makes creating fixtures for .NET tests easy.
 
+## Download
+
+You can download the latest release NuGet from the [NuGet Gallery](https://www.nuget.org/packages/MarcelMelzig.TestEnvironment/).
+
+Pre-release versions can be downloaded and tested from [Package MarcelMelzig.TestEnvironment (github.com)](https://github.com/iBrotNano/TestEnvironment/pkgs/nuget/MarcelMelzig.TestEnvironment). They will be deleted regularly. So using them will definitely break your builds after some time.
+
 ## File an issue
 
-You can file an issue here in GitHub. Please use the issue templates "bug report" for bugs and "feature request" for missing features. The other issue types are for internal planning and documentation. Those issue types are forms which will lead you through the reporting process.
+You can file an issue in [GitHub](https://github.com/iBrotNano/TestEnvironment). Please use the issue templates `bug report` for bugs and `feature request` for missing features. The other issue types are for internal planning and documentation. Those issue types are forms which will lead you through the reporting process.
 
 ## Documentation
 
 You will find all documentation for the library in the [wiki](https://github.com/iBrotNano/TestEnvironment/wiki).
-
-The api documentation will be published at [Uri to the api docs].
 
 ## Using the environment for your own tests
 
