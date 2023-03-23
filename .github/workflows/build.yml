@@ -31,13 +31,16 @@ jobs:
       run: dotnet restore
     - name: Generate package version for regular builds
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\/#/-}-$VERSION_BUILD" >> $GITHUB_ENV
-      if: github.event_name != 'pull_request' && github.ref_name != 'production'
+      if: github.event_name != 'pull_request' && github.ref_name != 'production' && !startsWith(github.ref_name, 'release/')
     - name: Generate package version for PRs
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-PR-$VERSION_BUILD" >> $GITHUB_ENV
       if: github.event_name == 'pull_request'
     - name: Generate package version for production builds
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH" >> $GITHUB_ENV
       if: github.ref_name == 'production'
+    - name: Generate package version for release builds
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR-RC-$VERSION_PATCH" >> $GITHUB_ENV
+      if: startsWith(github.ref_name, 'release/')
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
     - name: Generate file version
