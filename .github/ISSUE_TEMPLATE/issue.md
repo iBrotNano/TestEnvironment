@@ -39,8 +39,8 @@ Are there any?
 
 ## Acceptance tests
 
-1. First test to validate the requirement.
-1. Second test.
+- [ ] First test to validate the requirement.
+- [ ] Second test.
 
 ## Design
 
@@ -106,8 +106,7 @@ Link to related PIA
 ## Demo
 
 - [ ] Setup a fresh demo environment
-
-Results of the acceptance tests.
+- [ ] Check all acceptance tests
 
 ## Deployment
 

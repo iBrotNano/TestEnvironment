@@ -4,32 +4,31 @@ about: Not intended for users!
 title: Release vx.x.x
 labels: ''
 assignees: iBrotNano
-
 ---
 
 ## Details
 
-| Name      | Value |
-| :-------- | :---- |
+| Name | Value |
+| :--- | :--- |
 | Milestone | [1.0.0](Url to Milestone) |
-| Owner     | @owner |
+| Owner | @owner |
 
 ### Todo
 
-- [ ] Create a `release` branch from `master` for the RC
+- [ ] Start a release page in the wiki
+- [ ] Create a `release` branch from `main` for the RC
 - [ ] Start the test phase
 - [ ] Collect all test results
 - [ ] Create bugfix issues if needed for the current release
 - [ ] Start bugfixing
 - [ ] Redo the test phase
 - [ ] Update the version number for the release (Major.Minor.Patch)
-- [ ] Merge `release`  into `master` and `production` with `fast forward`
-- [ ] Tag `production` with version number from current milestone
+- [ ] Merge `release`  into `production` with `fast forward`
+- [ ] Merge `production` into `main` with `merge commit`
 - [ ] Update the Changelog in the wiki
 - [ ] Complete the release page of the current release in the wiki
 - [ ] Move old release page into the archive folder
-- [ ] Close the milestone
-- [ ] Backup all project files for documentation
+- [ ] Publish the release draft on GitHub
 - [ ] Release the application into production
 
 ### Notes
