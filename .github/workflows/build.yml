@@ -39,7 +39,7 @@ jobs:
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH" >> $GITHUB_ENV
       if: github.ref_name == 'production'
     - name: Generate package version for release builds
-      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR-RC-$VERSION_PATCH" >> $GITHUB_ENV
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-RC-$VERSION_BUILD" >> $GITHUB_ENV
       if: startsWith(github.ref_name, 'release/')
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
