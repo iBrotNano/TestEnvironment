@@ -3,7 +3,7 @@ name: build # Name of the action
 env:
   VERSION_MAJOR: 1 # Major version of the package. Will be set in the project and binaries.
   VERSION_MINOR: 0 # Minor version of the package. Will be set in the project and binaries.
-  VERSION_PATCH: 5 # Patch version of the package. Will be set in the project and binaries.
+  VERSION_PATCH: 6 # Patch version of the package. Will be set in the project and binaries.
   VERSION_BUILD: ${{ github.run_number }} # The run number is used as a build number for the version.
   VERSION_SUFFIX: ${{ github.ref_name }} # The branch name is used to generate a suffix for pre-releases.
 
