@@ -3,16 +3,16 @@ name: build # Name of the action
 env:
   VERSION_MAJOR: 1 # Major version of the package. Will be set in the project and binaries.
   VERSION_MINOR: 0 # Minor version of the package. Will be set in the project and binaries.
-  VERSION_PATCH: 5 # Patch version of the package. Will be set in the project and binaries.
+  VERSION_PATCH: 6 # Patch version of the package. Will be set in the project and binaries.
   VERSION_BUILD: ${{ github.run_number }} # The run number is used as a build number for the version.
   VERSION_SUFFIX: ${{ github.ref_name }} # The branch name is used to generate a suffix for pre-releases.
 
 on:
   workflow_dispatch: # Start a run through the UI.
   push:
-    branches: [ "main", "feature/*", "bugfix/*", "production" ] # Starts on pushes to this branches.
+    branches: [ "main", "feature/*", "bugfix/*", "release/*" , "production" ] # Starts on pushes to this branches.
   pull_request:
-    branches: [ "main", "production" ] # Starts on pull requests to this branches.
+    branches: [ "main", "production", "release/*"  ] # Starts on pull requests to this branches.
 
 jobs:
   build:
@@ -31,13 +31,16 @@ jobs:
       run: dotnet restore
     - name: Generate package version for regular builds
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-${VERSION_SUFFIX/\/#/-}-$VERSION_BUILD" >> $GITHUB_ENV
-      if: github.event_name != 'pull_request' && github.ref_name != 'production'
+      if: github.event_name != 'pull_request' && github.ref_name != 'production' && !startsWith(github.ref_name, 'release/')
     - name: Generate package version for PRs
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-PR-$VERSION_BUILD" >> $GITHUB_ENV
       if: github.event_name == 'pull_request'
     - name: Generate package version for production builds
       run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH" >> $GITHUB_ENV
       if: github.ref_name == 'production'
+    - name: Generate package version for release builds
+      run: echo "PACKAGE_VERSION=$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH-RC-$VERSION_BUILD" >> $GITHUB_ENV
+      if: startsWith(github.ref_name, 'release/')
     - name: Generate assembly version
       run: echo "ASSEMBLY_VERSION=$VERSION_MAJOR.0.0.0" >> $GITHUB_ENV
     - name: Generate file version
