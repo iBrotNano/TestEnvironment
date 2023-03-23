@@ -10,9 +10,9 @@ env:
 on:
   workflow_dispatch: # Start a run through the UI.
   push:
-    branches: [ "main", "feature/*", "bugfix/*", "production" ] # Starts on pushes to this branches.
+    branches: [ "main", "feature/*", "bugfix/*", "release/*" , "production" ] # Starts on pushes to this branches.
   pull_request:
-    branches: [ "main", "production" ] # Starts on pull requests to this branches.
+    branches: [ "main", "production", "release/*"  ] # Starts on pull requests to this branches.
 
 jobs:
   build:
