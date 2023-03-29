@@ -30,6 +30,7 @@ assignees: iBrotNano
 - [ ] Move old release page into the archive folder
 - [ ] Publish the release draft on GitHub
 - [ ] Release the application into production
+- [ ] Close the milestone
 
 ### Notes
 
