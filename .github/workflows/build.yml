@@ -69,6 +69,8 @@ jobs:
       run: dotnet build --no-restore -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
+    - name: Generate License
+      run: dotnet tool install --global dotnet-project-licenses --version 3.0.0-alpha.9 && dotnet-project-licenses -i .\MarcelMelzig.TestEnvironment.sln >> .\LICENSE
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: NuGet Repo Cleanup # Removes old pre-release packages from GitHub'S NuGet repository.
@@ -88,6 +90,11 @@ jobs:
       with:
         name: Docs
         path: /home/runner/work/TestEnvironment/TestEnvironment/*.md
+    - name: Upload License
+      uses: actions/upload-artifact@v3
+      with:
+        name: License
+        path: /home/runner/work/TestEnvironment/TestEnvironment/LICENSE
     - name: Publish To Github NuGet Repo
       run: |
         dotnet nuget add source --username iBrotNano --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/iBrotNano/index.json"
