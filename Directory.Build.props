@@ -1,22 +1,27 @@
 <Project>
 	<PropertyGroup>
-		<!-- Here are the version used for the assemblies and the NuGet package. 
-		The fix versions 4.7.1.1 or 4.7.11 are replaced with the real version by 
+		<!-- Here are the version used for the assemblies and the NuGet package.
+		The fix versions 4.7.1.1 or 4.7.11 are replaced with the real version by
 		the build server. -->
 		<PackageVersion>4.7.11</PackageVersion>
 		<FileVersion>4.7.1.1</FileVersion>
 		<InformationalVersion>4.7.11</InformationalVersion>
 		<AssemblyVersion>4.7.1.1</AssemblyVersion>
+		<!-- Here is some configuration for C# -->
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 		<!-- This is metadata about the package. It is used to pack the NuGet. -->
 		<Authors>Marcel Melzig</Authors>
 		<Description>Implements a test environment.</Description>
 		<Copyright>© Marcel Melzig</Copyright>
-		<PackageTags>test environment xunit tdd</PackageTags>
+		<PackageProjectUrl>https://github.com/iBrotNano/TestEnvironment</PackageProjectUrl>
+		<PackageTags>test environment xunit tdd setup fixtures</PackageTags>
 		<Title>Test Environment</Title>
-		<PackageIcon>Seat-Belt-256.png</PackageIcon>
+		<PackageIcon></PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>Git</RepositoryType>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<!--<PackageLicenseExpression>MIT</PackageLicenseExpression>-->
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<!-- Here some configuration for the development and the build of this project is done. -->
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<NoWarn>1701;1702;1591</NoWarn>
@@ -46,9 +51,20 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
 	<Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
-		<ReadLinesFromFile File="../CHANGELOG.md" >
-			<Output TaskParameter="Lines" ItemName="ReleaseNoteLines"/>
+		<ReadLinesFromFile File="../CHANGELOG.md">
+			<Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
 		</ReadLinesFromFile>
 		<PropertyGroup>
 			<PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>

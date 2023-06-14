@@ -11,6 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppExample", "AppExample\Ap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A36C0E54-01B3-481E-B04D-5C3A93B2E25E}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		.github\ISSUE_TEMPLATE\bug.md = .github\ISSUE_TEMPLATE\bug.md
 		.github\ISSUE_TEMPLATE\bug_report.yml = .github\ISSUE_TEMPLATE\bug_report.yml
 		.github\workflows\build.yml = .github\workflows\build.yml
@@ -22,7 +23,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\ISSUE_TEMPLATE\issue.md = .github\ISSUE_TEMPLATE\issue.md
 		README.md = README.md
 		.github\ISSUE_TEMPLATE\release.md = .github\ISSUE_TEMPLATE\release.md
-		Seat-Belt-256.png = Seat-Belt-256.png
 		.github\ISSUE_TEMPLATE\task.md = .github\ISSUE_TEMPLATE\task.md
 	EndProjectSection
 EndProject

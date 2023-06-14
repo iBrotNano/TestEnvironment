@@ -2,27 +2,10 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<PackageProjectUrl>https://github.com/iBrotNano/TestEnvironment</PackageProjectUrl>
-		<PackageIcon />
-		<PackageTags>test environment xunit tdd setup fixtures</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="..\README.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="FluentValidation" />
-		<PackageReference Include="Microsoft.AspNetCore.Http" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions">
-			<TreatAsUsed>true</TreatAsUsed>
-		</PackageReference>
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages" />
 		<PackageReference Include="Microsoft.Data.Sqlite.Core" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
@@ -38,6 +21,7 @@
 			<ExcludeAssets>build</ExcludeAssets>
 		</PackageReference>
 		<PackageReference Include="xunit.extensibility.core" />
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 
 </Project>
