@@ -53,6 +53,7 @@ How can the task be done?
 - [ ] Here is the place for development todo items
 - [ ] Check if the exception handling is well done
 - [ ] Check if further tests must be written
+- [ ] Are there license conflicts for new dependencies?
 - [ ] Exisits a `global.json`
 - [ ] Are all TODOs in the code done?
 - [ ] Write meaningful comments
@@ -70,11 +71,19 @@ How can the task be done?
 
 Notes about the development of the issue.
 
-<div style="color:#206815; background-color: #b9ffbe; display: block; padding: 10px 15px; border-left: 5px solid #4bd737; margin: 10px 0; border-radius: 5px"><span style="font-size: 1.4em; padding-right: 10px; color: #309f20;">✔</span><span style="font-size: 1.2em; font-weight: bold;">Best Practice</span><br/>Text</div>
-<div style="color:#a03838; background-color: #ffb9b9; display: block; padding: 10px 15px; border-left: 5px solid #db3733; margin: 10px 0; border-radius: 5px"><span style="font-size: 1.4em; padding-right: 10px; color: #db3733;">✖</span><span style="font-size: 1.2em; font-weight: bold;">Error</span><br/>Text</div>
-<div style="color:#8a7900; background-color: #fff177; display: block; padding: 10px 15px; border-left: 5px solid #fbac1a; margin: 10px 0; border-radius: 5px"><span style="font-size: 1.4em; padding-right: 10px; color: #dd4200;">⚠</span><span style="font-size: 1.2em; font-weight: bold;">Warning</span><br/>Text</div>
-<div style="color:#00314f; background-color: #b9e4ff; display: block; padding: 10px 15px; border-left: 5px solid #0094ec; margin: 10px 0; border-radius: 5px"><span style="font-size: 1.4em; padding-right: 10px; color: #007bc6;">ℹ</span><span style="font-size: 1.2em; font-weight: bold;">Info</span><br/>Text</div>
-<div style="color:#6a0176; background-color: #e6b7ff; display: block; padding: 10px 15px; border-left: 5px solid #c004ff; margin: 10px 0; border-radius: 5px"><span style="font-size: 1.4em; padding-right: 10px; color: #8000aa; font-weight: bold;">🗒</span><span style="font-size: 1.2em; font-weight: bold;">Info</span><br/>Text</div>
+✔ Best Practice
+Text
+
+✖ Error
+Text
+
+⚠ WarningText
+
+ℹ Info
+Text
+
+🗒 Info
+Text
 
 ## Debug
 
