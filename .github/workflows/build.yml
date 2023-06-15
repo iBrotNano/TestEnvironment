@@ -72,6 +72,7 @@ jobs:
     - name: Generate License
       run: |
           dotnet tool install --global dotnet-project-licenses
+          dotnet-project-licenses --help
           dotnet-project-licenses -i MarcelMelzig.TestEnvironment.sln >> LICENSE
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
