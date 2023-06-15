@@ -70,7 +70,9 @@ jobs:
     - name: Test
       run: dotnet test -c Release --no-build --verbosity normal
     - name: Generate License
-      run: dotnet tool install dotnet-project-licenses --version 3.0.0-alpha.9 & dotnet-project-licenses -i MarcelMelzig.TestEnvironment.sln >> LICENSE
+      run: |
+          dotnet tool install --global dotnet-project-licenses
+          dotnet-project-licenses -i MarcelMelzig.TestEnvironment.sln >> LICENSE
     - name: Pack
       run: dotnet pack MarcelMelzig.TestEnvironment/MarcelMelzig.TestEnvironment.csproj --no-build -c Release -p:CONTINUOUS_INTEGRATION_BUILD=true
     - name: NuGet Repo Cleanup # Removes old pre-release packages from GitHub'S NuGet repository.
