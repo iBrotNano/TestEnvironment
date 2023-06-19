@@ -116,6 +116,7 @@ jobs:
         files: |
           README.md
           LICENSE
+          THIRD-PARTY-NOTICES.TXT
           CHANGELOG.md
         body_path: CHANGELOG.md
         draft: true
