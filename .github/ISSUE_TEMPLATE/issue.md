@@ -4,7 +4,6 @@ about: Not intended for users!
 title: Summary
 labels: issue
 assignees: iBrotNano
-
 ---
 
 ## Requirements
@@ -39,8 +38,7 @@ Are there any?
 
 ## Acceptance tests
 
-- [ ] First test to validate the requirement.
-- [ ] Second test.
+- [ ] Test to validate the requirement.
 
 ## Design
 
@@ -63,22 +61,42 @@ Architecture of the system and/or layout of the GUI. Specification of the input 
 - [ ] Here is the place for development to-do items
 - [ ] Check if the exception handling is well done
 - [ ] Check if further tests must be written
+- [ ] Are there license conflicts for new dependencies?
+- [ ] Exisits a `global.json`
+- [ ] Remove deactivated code
+- [ ] Are all TODOs in the code done?
 - [ ] Write meaningful comments
 - [ ] Are there any compiler warnings?
-- [ ] Do all unit tests pass?
+- [ ] Do all unit tests pass in Visual Studio?
+- [ ] Do all unit tests pass with `dotnet test`?
+- [ ] `dotnet format Contracts.Service.sln --verify-no-changes --verbosity diagnostic`
 - [ ] Is the version number correctly configured?
 - [ ] Phrase a meaningful commit comment
 - [ ] Check-in the changes and push them to the server
+- [ ] Does the build on the buildserver succeed?
+- [ ] Create a PR
 
 ### Notes
 
 Notes about the development of the issue.
 
+✔ Best Practice
+Text
+
+✖ Error
+Text
+
+⚠ WarningText
+
+ℹ Info
+Text
+
+🗒 Info
+Text
+
 ## Debug
 
-| ID   | Result | Pass |
-| ---- | ------ | ---- |
-| 1   |        | 🟢🔴🟡  |
+- [ ] ID: 🟢🔴🟡 Result: As Expected
 
 ## Documentation
 
@@ -110,6 +128,6 @@ Link to related PIA
 
 ## Deployment
 
-- [ ] Merge `feature` into `master` with a `squash` and remove the `feature` branch
+- [ ] Merge `feature` into `master` or `hotfix` into `production` and `master` and remove the `bugfix` branch
 - [ ] Check if the compiled artifact is valid
 - [ ] Cleanup the Git history locally on the dev system

@@ -73,9 +73,9 @@
             out ActionExecutedContext actionExecutedContext,
             out ActionExecutionDelegate executionDelegate,
             string? httpMethod = null,
-            IDictionary<string, object>? actionArguments = null)
+            IDictionary<string, object?>? actionArguments = null)
         {
-            actionArguments ??= Mock.Of<IDictionary<string, object>>();
+            actionArguments ??= Mock.Of<IDictionary<string, object?>>();
 
             var httpContext = Mock.Of<HttpContext>(hc =>
                 hc.Request == Mock.Of<HttpRequest>(hr =>
