@@ -96,7 +96,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: License
-        path: /home/runner/work/TestEnvironment/TestEnvironment/LICENSE
+        path: |
+          /home/runner/work/TestEnvironment/TestEnvironment/LICENSE
+          /home/runner/work/TestEnvironment/TestEnvironment/THIRD-PARTY-NOTICES.TXT
     - name: Publish To Github NuGet Repo
       run: |
         dotnet nuget add source --username iBrotNano --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/iBrotNano/index.json"
