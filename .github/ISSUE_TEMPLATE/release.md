@@ -37,18 +37,8 @@ assignees: iBrotNano
 
 Nothing to mention.
 
+> **Note**
+> This is a note
 
-
-✔ Best Practice
-Text
-
-✖ Error
-Text
-
-⚠ WarningText
-
-ℹ Info
-Text
-
-🗒 Info
-Text
+> **Warning**
+> This is a warning
