@@ -71,19 +71,11 @@ How can the task be done?
 
 Notes about the development of the issue.
 
-✔ Best Practice
-Text
+> **Note**
+> This is a note
 
-✖ Error
-Text
-
-⚠ WarningText
-
-ℹ Info
-Text
-
-🗒 Info
-Text
+> **Warning**
+> This is a warning
 
 ## Debug
 
